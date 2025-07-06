@@ -3,6 +3,7 @@ const {
   registerUser,
   loginUser,
   logoutUser,
+  verifyUser,
 } = require("../controllers/authController");
 
 const authRoutes = express.Router();
@@ -15,5 +16,8 @@ authRoutes.post("/login", loginUser);
 
 // Logout route
 authRoutes.post("/logout", logoutUser);
+
+// Verify user route
+authRoutes.get("/verify", verifyUser);
 
 module.exports = authRoutes;
